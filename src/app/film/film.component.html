@@ -1,7 +1,26 @@
 <section class="midas my-5">
   <div class="container">
     <div class="row">
-      Film works
+
+
+      <div class="col-lg-4 col-sm-6 col-12 my-4" *ngFor="let film of filmData">
+        <div class="card mx-auto" style="width: 18rem;">
+
+          <img class="card-img-top" src="../../assets/img/home-film.jpg" alt="Card image cap">
+
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{ film.title }}</strong></h5>
+            <p class="card-text"><strong>Released On:</strong> {{film.release_date | date:'longDate'}}</p>
+            <p class="card-text"><strong>Episode Id:</strong> {{film.episode_id}}</p>
+            <p class="card-text"><strong>Director:</strong> {{film.director}}</p>
+            <p class="card-text"><strong>Description:</strong> {{film.opening_crawl}}</p>
+            <a style="cursor:pointer" routerLink="/films" class="btn btn-warning">Know More!</a>
+          </div>
+
+        </div>
+      </div>
+
+
     </div>
   </div>
 </section>

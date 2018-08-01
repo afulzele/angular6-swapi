@@ -24,8 +24,8 @@ export class ApiService {
     return this.httpClient.get(`${this.api_url}films`, {observe:'body', responseType:'json'})
       .pipe(map(
         (data:Object)=>{
-          console.log(data['results']);
-          return data;
+          // console.log(data['results']);
+          return data['results'];
         }
       ));
   }

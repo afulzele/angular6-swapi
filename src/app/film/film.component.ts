@@ -7,6 +7,7 @@ import { ApiService } from '../shared/api.service';
   styleUrls: ['./film.component.css']
 })
 export class FilmComponent implements OnInit {
+  filmData=[]
 
   constructor(private apiService:ApiService) { }
 
@@ -17,7 +18,8 @@ export class FilmComponent implements OnInit {
   public getAllFilm(){
     this.apiService.getFilmService().subscribe(
       (data)=>{
-        console.log(data['count']);
+        this.filmData = data;
+        console.log(data);
       }
     );
   }
