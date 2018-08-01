@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Response } from '@angular/http';
+
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiService) { }
 
   ngOnInit() {
+    this.getAll();
+  }
+
+  public getAll(){
+    this.apiService.getAll().subscribe(
+      (response:Response) => {
+        console.log(response);
+      }
+    );
   }
 
 }
