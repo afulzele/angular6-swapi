@@ -8,12 +8,6 @@ import { map } from 'rxjs/operators';
 })
 export class ApiService {
   api_url = 'https://swapi.co/api/'
-  films_api_url = ''
-  people_api_url = ''
-  planets_api_url = ''
-  species_api_url = ''
-  starships_api_url = ''
-  vehicles_api_url = ''
 
   constructor(private httpClient:HttpClient) {}
 
@@ -21,12 +15,16 @@ export class ApiService {
     return  this.httpClient.get(`${this.api_url}`, {observe:'body', responseType:'json'})
       .pipe(map(
         (data:Object) => {
-          this.films_api_url = data['films']
-          this.people_api_url = data['people']
-          this.planets_api_url = data['planets']
-          this.species_api_url = data['species']
-          this.starships_api_url = data['starships']
-          this.vehicles_api_url = data['vehicles']
+          return data;
+        }
+      ));
+  }
+
+  getFilmService(){
+    return this.httpClient.get(`${this.api_url}films`, {observe:'body', responseType:'json'})
+      .pipe(map(
+        (data:Object)=>{
+          console.log(data['results']);
           return data;
         }
       ));

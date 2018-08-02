@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-film',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiService) { }
 
   ngOnInit() {
+    this.getAllFilm();
+  }
+
+  public getAllFilm(){
+    this.apiService.getFilmService().subscribe(
+      (data)=>{
+        console.log(data['count']);
+      }
+    );
   }
 
 }
