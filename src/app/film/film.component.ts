@@ -8,6 +8,7 @@ import { ApiService } from '../shared/api.service';
 })
 export class FilmComponent implements OnInit {
   filmData=[]
+  gotId:number;
 
   constructor(private apiService:ApiService) { }
 
@@ -22,6 +23,13 @@ export class FilmComponent implements OnInit {
         console.log(data);
       }
     );
+  }
+
+  public getFilmId(url){
+    console.log(url);
+    let extractedId = url.replace('https://swapi.co/api/films/', '');
+    console.log(parseInt(extractedId));
+    this.gotId = parseInt(extractedId);
   }
 
 }

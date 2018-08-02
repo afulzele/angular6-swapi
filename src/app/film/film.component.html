@@ -1,10 +1,13 @@
-<section class="midas my-5">
+<section class="midas my-2">
   <div class="container">
     <div class="row">
 
+      <div class="col-12 my-4 text-center page-title">
+        Star Wars Films
+      </div>
 
-      <div class="col-lg-4 col-sm-6 col-12 my-4" *ngFor="let film of filmData">
-        <div class="card mx-auto" style="width: 18rem;">
+      <div class="col-lg-4 col-sm-6 col-12 my-3" *ngFor="let film of filmData">
+        <div class="card mx-auto">
 
           <img class="card-img-top" src="../../assets/img/home-film.jpg" alt="Card image cap">
 
@@ -14,7 +17,7 @@
             <p class="card-text"><strong>Episode Id:</strong> {{film.episode_id}}</p>
             <p class="card-text"><strong>Director:</strong> {{film.director}}</p>
             <p class="card-text"><strong>Description:</strong> {{film.opening_crawl}}</p>
-            <a style="cursor:pointer" routerLink="/films" class="btn btn-warning">Know More!</a>
+            <a style="cursor:pointer" (click)="getFilmId(film.url)" routerLink="/films/{{gotId}}" class="btn btn-warning">Know More!</a>
           </div>
 
         </div>

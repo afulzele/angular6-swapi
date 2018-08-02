@@ -2,6 +2,7 @@
 @import '../node_modules/font-awesome/css/font-awesome.css';
 
 // -------------- Start Here -------------- //
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 * {
     margin: 0;
@@ -22,4 +23,11 @@ body {
 
 .midas{
     min-height: 70vh;
+}
+
+.page-title{
+    color: #ffd700;
+    font-family: 'Anton', sans-serif;
+    padding: 20px;
+    font-size: 250%;
 }
