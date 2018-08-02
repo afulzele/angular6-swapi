@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Response } from '@angular/http';
 
 import { ApiService } from '../shared/api.service';
 
@@ -18,8 +17,8 @@ export class HomeComponent implements OnInit {
 
   public getAll(){
     this.apiService.getAllService().subscribe(
-      (response:Response) => {
-        console.log(response);
+      (data) => {
+        console.log(data);
       }
     );
   }
