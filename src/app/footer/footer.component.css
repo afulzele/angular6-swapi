@@ -1,0 +1,60 @@
+footer {
+  background-color: #010806;
+  padding: 80px 0 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 80%;
+}
+
+footer a:link,
+footer a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+footer p a:hover,
+footer p a:active {
+  text-decoration: none;
+  color: #ffd700;
+}
+
+/* ------- Social Icons and Image ------- */
+
+footer .social-icons {
+  font-size: 150%;
+}
+
+footer .social-icons,
+footer img {
+  margin-bottom: 30px;
+}
+
+footer .social-icons a {
+  margin-right: 15px;
+}
+
+footer .social-icons a:last-child {
+  margin-right: 0px;
+}
+
+footer .social-icons .fa-facebook-square,
+footer .social-icons .fa-instagram,
+footer .social-icons .fa-pinterest-square,
+footer .social-icons .fa-linkedin-square {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+footer .social-icons .fa-facebook-square:hover,
+footer .social-icons .fa-facebook-square:visited,
+footer .social-icons .fa-instagram:hover,
+footer .social-icons .fa-instagram:visited,
+footer .social-icons .fa-pinterest-square:hover,
+footer .social-icons .fa-pinterest-square:visited,
+footer .social-icons .fa-linkedin-square:hover,
+footer .social-icons .fa-linkedin-square:visited,
+footer .fa-heart {
+  color: #ffd700;
+}

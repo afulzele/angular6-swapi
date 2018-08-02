@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   public getAll(){
-    this.apiService.getAll().subscribe(
+    this.apiService.getAllService().subscribe(
       (response:Response) => {
         console.log(response);
       }
