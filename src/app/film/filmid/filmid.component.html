@@ -25,7 +25,26 @@
     </div>
 
     <div class="col-lg-4 col-sm-6 col-12 my-3 text-center" *ngFor="let item of singleFilmData['characters']">
-      {{item}}
+
+
+      <div class="card mx-auto">
+
+        <!-- <img class="card-img-top" src="../../assets/img/home-film.jpg" alt="Card image cap"> -->
+
+        <div class="card-body">
+          <h5 class="card-title">
+            <strong>{{ item }}</strong>
+          </h5>
+          <!-- <p class="card-text"><strong>Released On:</strong> {{film.release_date | date:'longDate'}}</p>
+          <p class="card-text"><strong>Episode Id:</strong> {{film.episode_id}}</p>
+          <p class="card-text"><strong>Director:</strong> {{film.director}}</p>
+          <p class="card-text"><strong>Description:</strong> {{film.opening_crawl}}</p> -->
+        </div>
+
+      </div>
+
+
+
     </div>
 
   </div>
