@@ -23,4 +23,13 @@ body {
   padding: 20px;
   font-size: 250%; }
 
+.basic-sub-title {
+  color: #ffd700;
+  font-family: 'Anton', sans-serif;
+  padding: 20px;
+  font-size: 200%; }
+
+.card {
+  border: 1px solid rgba(255, 215, 0, 0.8); }
+
 /*# sourceMappingURL=styles.css.map */

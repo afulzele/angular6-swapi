@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FilmidComponent } from './film/filmid/filmid.component';
+import { FilmhomeComponent } from './film/filmhome/filmhome.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    FilmidComponent,
+    FilmhomeComponent,
   ],
   imports: [
     BrowserModule,

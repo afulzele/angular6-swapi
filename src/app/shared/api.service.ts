@@ -11,6 +11,11 @@ export class ApiService {
 
   constructor(private httpClient:HttpClient) {}
 
+  useExtraction(url, link){
+    let extractedId = url.replace(link, '');
+    return parseInt(extractedId);
+  }
+
   getAllService(){
     return  this.httpClient.get(`${this.api_url}`, {observe:'body', responseType:'json'})
       .pipe(map(
@@ -24,10 +29,22 @@ export class ApiService {
     return this.httpClient.get(`${this.api_url}films`, {observe:'body', responseType:'json'})
       .pipe(map(
         (data:Object)=>{
-          // console.log(data['results']);
+          console.log(data['results']);
           return data['results'];
         }
       ));
+  }
+
+  getSingleFilmService(id){
+    return this.httpClient.get(`${this.api_url}films/${id}/`, {observe:'body', responseType:'json'})
+      .pipe(map(
+        (data:Object)=>{
+          console.log(data);
+          return data;
+        }
+      )
+
+      );
   }
   
 
