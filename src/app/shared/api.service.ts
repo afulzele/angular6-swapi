@@ -42,9 +42,17 @@ export class ApiService {
           console.log(data);
           return data;
         }
-      )
+      ));
+  }
 
-      );
+  getSingleCharService(id){
+    return this.httpClient.get(`${this.api_url}people/${id}/`, {observe:'body', responseType:'json'})
+      .pipe(map(
+        (data:Object)=>{
+          console.log(data);
+          return data;
+        }
+      ));
   }
   
 
